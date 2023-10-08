@@ -1,0 +1,8 @@
+// _mixins.scss
+
+// Responsive mixin for mobile-first design
+@mixin mobile {
+  @media (max-inline-size: $mobile-width) {
+    @content;
+  }
+}

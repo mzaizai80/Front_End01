@@ -1,0 +1,39 @@
+@import '-antd/dist/antd.scss';
+
+// Import variables and mixins
+@import '_variables.scss';
+@import '_mixins.scss';
+
+// Apply styles to the entire application
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  color: $text-color;
+}
+
+// Header styles
+.header {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing-unit * 2;
+  text-align: center;
+
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+// Main content container
+.content-container {
+  margin: $spacing-unit * 2;
+}
+
+// Responsive styles
+.responsive-component {
+  padding: $spacing-unit;
+
+  @include mobile {
+    padding: $spacing-unit / 2;
+  }
+}

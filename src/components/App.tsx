@@ -1,16 +1,30 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store";
+import { addTodo } from "../actions/todoActions";
+import TodoList from "./TodoList";
+import 'scss/App.scss';
+import 'scss/Form.scss';
+import 'scss/TodoList.scss';
+import 'scss/TodoCard.scss';
 
-const MyComponent: React.FC = () => {
+
+
+const App: React.FC = () => {
   const dispatch = useDispatch();
-  const myValue = useSelector(
-    (state: RootState) => state.someReducer.someValue
+  const todos = useSelector((state: RootState) => state);
+
+  const handleAddTodo = () => {
+    dispatch(addTodo("Sample Todo"));
+  };
+
+  return (
+    <div>
+      <h1>TODO App</h1>
+      <button onClick={handleAddTodo}>Add Todo</button>
+      <TodoList todos={todos} />
+    </div>
   );
-
-  // Use dispatch and myValue here
-
-  return <div>{/* Your component content */}</div>;
 };
 
-export default MyComponent;
+export default App;

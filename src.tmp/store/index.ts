@@ -1,10 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import todoReducer from "../reducers/todoReducer";
+import rootReducer from "../reducers";
 
-const store = configureStore(
-    {
-        reducer:todoReducer
-    });
+const store = configureStore({
+  reducer: rootReducer,
+});
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

@@ -1,0 +1,18 @@
+.todo-form {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+
+  @include mobile {
+    margin: 10px;
+  }
+}
+
+.form-input {
+  inline-size: 100%;
+  padding: 8px;
+  font-family: $font-family;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+}
